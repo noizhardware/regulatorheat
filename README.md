@@ -1,5 +1,5 @@
 # REGULATOR HEAT
-## Calculates heatsink ratings and temeperatures for voltage regulators
+## Calculates heatsink ratings and temperatures for voltage regulators
 ### in OpenOffice .ODS spreadsheet format AND equations in .TXT format
 
 In this file I've put some useful calculations to design your power supply, based on the attached design, you can change the regulators of course, update the specs if you do so.
