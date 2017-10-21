@@ -1,23 +1,23 @@
 [transformer VAC rating] * sqrt(2) = VDC
 after diode drop: VDC - 0.7 = VDCdd
-I is the total absorbed current, measured after the diode bridge
-filter cap ripple (%) = [Pr = I / (2*Hz) * uF] * 1M * (100 / VDCdd)
+I is the total absorbed current, measured after the diode bridge  |  Hz is AC frequency  |  uF is cap value
+filter cap ripple (%) = Pr = I / [(2*Hz) * uF] * 1M * (100 / VDCdd)
 min. on cap ripple = VDCdd - [(VDC / 100) * Pr] = VDCcr
 
 WALL AC FLUCTUATION (+/- 10%)
 VDCcr * 0.9 = VDCmin --> this has to be >= max dropout of your regulator (e.g. 2V for lm7812)
 VDCcr * 1.1 = VDCmax --> use this to calculate worst case heat
 
-heat to be dissipated by the regulator (Vout is zour wanted voltage out) = Wd = (VDCmax - Vout) * I
+heat to be dissipated by the regulator (Vout is your wanted voltage out) = Wd = (VDCmax - Vout) * I
 
-Rthjc (thermal resistance, Junction/Case, if you are going to use a heatsink) - 5 k/w (or 캜/w) for lm7812
-Rthja (thermal resistance, Junction/Ambient, if you don't use a heatsink) - 60 k/w (or 캜/w) for lm7812
+Rthjc (thermal resistance, Junction/Case, if you are going to use a heatsink)  |  5 k/w (or 째C/w) for lm7812
+Rthja (thermal resistance, Junction/Ambient, if you don't use a heatsink)  |  60 k/w (or 째C/w) for lm7812
 
 max temperature, without heatsink. room temperature Rt:
 MAXjt = Rt + (Wd * Rthjc)
 
-max temperature, with an heatsink rated Hr (in k/w or 캜/w):
+max temperature, with an heatsink rated Hr (in k/w or 째C/w):
 MAXjt = Rt + [Wd * (Rthja + Hr)]
 
-compare these results with your regulator's max operating temperature - 125� for lm7812
-I usually use 60% to be on the safe side, so it would be ~70캜 for the lm7812
+compare these results with your regulator's max operating temperature  |  125째 for lm7812
+I usually use 60% to be on the safe side, so it would be ~70째C for the lm7812
