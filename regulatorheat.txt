@@ -13,7 +13,7 @@ heat to be dissipated by the regulator (Vout is your wanted voltage out) = Wd = 
 Rthjc (thermal resistance, Junction/Case, if you are going to use a heatsink)  |  5 k/w (or °C/w) for lm7812
 Rthja (thermal resistance, Junction/Ambient, if you don't use a heatsink)  |  60 k/w (or °C/w) for lm7812
 
-max temperature, without heatsink. room temperature Rt:
+MAX junction temperature, without heatsink. room temperature Rt:
 MAXjt = Rt + (Wd * Rthjc)
 
 max temperature, with an heatsink rated Hr (in k/w or °C/w):
